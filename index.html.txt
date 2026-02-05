@@ -3,27 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trade Finder | Expert Stock Analysis</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Raftar Casino | Recover Your Losses</title>
+    
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '3135144523541125');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=3135144523541125&ev=PageView&noscript=1"
+    /></noscript>
     <style>
         :root {
-            --primary-green: #2ecc71;
-            --dark-bg: #0f172a;
-            --card-bg: #1e293b;
-            --text-main: #f8fafc;
-            --text-dim: #94a3b8;
+            --primary-gold: #ffcf4b;
+            --deep-black: #0f0f0f;
+            --accent-blue: #0088cc;
+            --text-gray: #b3b3b3;
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
         }
 
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--dark-bg);
-            color: var(--text-main);
+            background-color: var(--deep-black);
+            color: white;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -32,170 +46,110 @@
         }
 
         .container {
-            background: var(--card-bg);
+            max-width: 500px;
             width: 100%;
-            max-width: 450px;
-            padding: 40px 30px;
+            background: linear-gradient(145deg, #1a1a1a, #0a0a0a);
+            border: 1px solid #333;
             border-radius: 24px;
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+            padding: 40px 20px;
             text-align: center;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        .profile-wrapper {
-            position: relative;
-            width: 120px;
-            height: 120px;
-            margin: 0 auto 25px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
         }
 
         .profile-img {
-            width: 100%;
-            height: 100%;
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
+            border: 3px solid var(--primary-gold);
+            margin-bottom: 20px;
             object-fit: cover;
-            border: 4px solid var(--primary-green);
-            padding: 3px;
-        }
-
-        .badge {
-            position: absolute;
-            bottom: 5px;
-            right: 5px;
-            background: var(--primary-green);
-            color: white;
-            border-radius: 50%;
-            width: 25px;
-            height: 25px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 14px;
-            border: 3px solid var(--card-bg);
         }
 
         h1 {
-            font-size: 24px;
-            font-weight: 700;
-            margin-bottom: 8px;
-            letter-spacing: -0.5px;
-        }
-
-        .handle {
-            color: var(--primary-green);
-            font-weight: 600;
-            margin-bottom: 20px;
-            display: block;
+            font-size: 2rem;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, #fff, var(--primary-gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .description {
-            color: var(--text-dim);
+            color: var(--text-gray);
+            font-size: 1.1rem;
             line-height: 1.6;
             margin-bottom: 30px;
-            font-size: 15px;
+        }
+
+        .recovery-box {
+            background: rgba(255, 207, 75, 0.1);
+            border-left: 4px solid var(--primary-gold);
+            padding: 15px;
+            margin-bottom: 30px;
+            text-align: left;
+            border-radius: 8px;
+        }
+
+        .recovery-box p {
+            font-size: 0.95rem;
+            color: #efefef;
         }
 
         .cta-button {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            background: var(--primary-green);
+            display: inline-block;
+            width: 100%;
+            background-color: var(--accent-blue);
             color: white;
             text-decoration: none;
-            padding: 16px;
+            padding: 18px;
             border-radius: 12px;
-            font-weight: 700;
-            font-size: 16px;
-            transition: transform 0.2s, background 0.2s;
-            box-shadow: 0 10px 15px -3px rgba(46, 204, 113, 0.2);
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: transform 0.2s, background-color 0.2s;
+            box-shadow: 0 4px 15px rgba(0, 136, 204, 0.3);
         }
 
         .cta-button:hover {
+            background-color: #007bbd;
             transform: translateY(-2px);
-            background: #27ae60;
         }
 
-        .cta-button:active {
-            transform: translateY(0);
-        }
-
-        .stats {
-            margin-top: 30px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            padding-top: 25px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .stat-item span {
-            display: block;
-            font-weight: 700;
-            font-size: 18px;
-        }
-
-        .stat-item small {
-            color: var(--text-dim);
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        @keyframes pulse {
-            0% { opacity: 1; }
-            50% { opacity: 0.5; }
-            100% { opacity: 1; }
-        }
-
-        .live-indicator {
-            display: inline-block;
-            width: 8px;
-            height: 8px;
-            background: #ff4757;
-            border-radius: 50%;
-            margin-right: 5px;
-            animation: pulse 1.5s infinite;
+        .footer-note {
+            margin-top: 20px;
+            font-size: 0.8rem;
+            color: #555;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="profile-wrapper">
-            <img src="https://images.lumacdn.com/cdn-cgi/image/format=auto,fit=cover,dpr=2,background=white,quality=75,width=400,height=400/editor-attachments/clsq6n6z8018h110cln83n9v2" alt="Trade Finder Admin" class="profile-img">
-            <div class="badge">✓</div>
+        <img src="https://ibb.co/7JXk0qvm" alt="Raftar Casino" class="profile-img">
+        
+        <h1>Raftar Casino</h1>
+        <p class="description">Stop guessing. Start winning.</p>
+
+        <div class="recovery-box">
+            <p><strong>How we help:</strong> We specialize in 1-on-1 loss recovery strategies. By analyzing algorithm patterns and disciplined bankroll management, we help you bridge the gap between your losses and profit.</p>
         </div>
 
-        <h1>Trade Finder</h1>
-        <span class="handle">@TradeFinder_Official</span>
-
-        <p class="description">
-            Master the markets with institutional-grade insights. We provide real-time <b>Stock Market Analysis</b>, NIFTY/BankNIFTY levels, and educational content designed to help you identify high-probability trade setups.
-        </p>
-
-        <a href="https://t.me/+WHTnVZTusbA1YTRl" class="cta-button">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
-            Join Telegram Channel
+        <a href="https://t.me/+7McRoT1qRqk2MGRl" class="cta-button" id="joinBtn">
+            JOIN TELEGRAM NOW
         </a>
 
-        <div class="stats">
-            <div class="stat-item">
-                <span>Free</span>
-                <small>Daily Levels</small>
-            </div>
-            <div class="stat-item">
-                <span><i class="live-indicator"></i>Live</span>
-                <small>Market Updates</small>
-            </div>
-        </div>
+        <p class="footer-note">Join 10,000+ members recovering daily.</p>
     </div>
 
     <script>
-        // Simple analytics or click tracking can be added here
-        document.querySelector('.cta-button').addEventListener('click', () => {
-            console.log('Redirecting to Telegram...');
+        document.getElementById('joinBtn').addEventListener('click', function(e) {
+            // Track the Subscribe Event in Meta Pixel
+            fbq('track', 'Subscribe');
+            
+            // Short delay to ensure pixel fires before redirect
+            setTimeout(function() {
+                console.log("Redirecting to Telegram...");
+            }, 100);
         });
     </script>
+
 </body>
 </html>
